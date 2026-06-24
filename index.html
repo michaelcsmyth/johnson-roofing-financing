@@ -113,6 +113,12 @@
       transition: background 0.2s, transform 0.15s;
     }
     .hero-cta:hover { background: var(--gold-hover); transform: translateY(-2px); }
+    .hero-cta-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .hero-cta-outline:hover { background: rgba(255,255,255,0.08); border-color: var(--white); }
 
     /* ── TRUST BAR ── */
     .trust-bar {
@@ -634,7 +640,10 @@
     <div class="hero-badge">Flexible Financing Available</div>
     <h1>Don't Let Budget<br><span>Stop Your Project</span></h1>
     <p>Get the roof your home needs today — with financing options designed to fit your budget. Apply in minutes through our lending partner, EnerBank.</p>
-    <a href="#loan-options" class="hero-cta">View Financing Options</a>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="#loan-options" class="hero-cta">View Financing Options</a>
+      <a href="#calculator" class="hero-cta hero-cta-outline">Payment Estimator</a>
+    </div>
   </div>
 </section>
 
@@ -853,7 +862,7 @@
 </section>
 
 <!-- PAYMENT CALCULATOR -->
-<section class="section calc-section">
+<section id="calculator" class="section calc-section">
   <div class="container">
     <div class="text-center">
       <div class="section-label">Run the Numbers</div>
