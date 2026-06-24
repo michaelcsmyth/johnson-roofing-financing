@@ -450,6 +450,168 @@
     }
     .footer-note a { color: #6a8aaa; text-decoration: none; }
 
+    /* ── PAYMENT CALCULATOR ── */
+    .calc-section { background: #0a1520; }
+    .calc-section .section-title { color: var(--white); }
+    .calc-section .section-sub { color: #8a9aaa; }
+
+    .calc-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a2433;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--gold);
+      border-radius: 6px;
+      padding: 40px 36px 32px;
+    }
+
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 28px;
+      align-items: end;
+    }
+
+    .calc-field label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7a8a9a;
+      margin-bottom: 8px;
+    }
+
+    .select-wrap {
+      position: relative;
+    }
+    .select-wrap select {
+      width: 100%;
+      appearance: none;
+      background: #0f1c2a;
+      border: 1px solid #2a3a4a;
+      border-radius: 4px;
+      color: var(--white);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      padding: 12px 36px 12px 14px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .select-wrap select:focus { border-color: var(--gold); }
+    .select-wrap select option { background: #0f1c2a; }
+    .select-wrap select optgroup { color: var(--gold); font-weight: 700; }
+    .select-arrow {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px; height: 16px;
+      color: var(--gold);
+      pointer-events: none;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-prefix {
+      position: absolute;
+      left: 14px;
+      color: var(--gold);
+      font-size: 15px;
+      font-weight: 600;
+      pointer-events: none;
+    }
+    .input-wrap input {
+      width: 100%;
+      background: #0f1c2a;
+      border: 1px solid #2a3a4a;
+      border-radius: 4px;
+      color: var(--white);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 14px 12px 28px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .input-wrap input:focus { border-color: var(--gold); }
+    .input-wrap input::placeholder { color: #445060; font-weight: 400; }
+
+    .calc-readonly {
+      background: #0f1c2a;
+      border: 1px solid #1e2e3e;
+      border-radius: 4px;
+      color: var(--gold);
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 14px;
+      text-align: center;
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calc-result {
+      background: linear-gradient(135deg, #0d1b2a, #1a2e44);
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .calc-result-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7a8a9a;
+      margin-bottom: 10px;
+    }
+    .calc-result-amount {
+      font-family: 'Oswald', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+      transition: all 0.2s;
+    }
+    .calc-result-note {
+      font-size: 12px;
+      color: #7a8a9a;
+      min-height: 18px;
+    }
+
+    .calc-sac-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(200, 151, 58, 0.08);
+      border: 1px solid rgba(200, 151, 58, 0.25);
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: #9aaa8a;
+      line-height: 1.6;
+    }
+    .calc-sac-note svg { flex-shrink: 0; margin-top: 1px; }
+    .calc-sac-note strong { color: var(--gold); }
+
+    .calc-disclaimer {
+      font-size: 10px;
+      color: #445060;
+      text-align: center;
+      line-height: 1.6;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       .top-bar { flex-direction: column; text-align: center; }
@@ -690,6 +852,94 @@
   </div>
 </section>
 
+<!-- PAYMENT CALCULATOR -->
+<section class="section calc-section">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Run the Numbers</div>
+      <h2 class="section-title">Payment Calculator</h2>
+      <p class="section-sub">Select a loan option, enter your project amount, and see your estimated monthly payment instantly.</p>
+    </div>
+
+    <div class="calc-card">
+
+      <div class="calc-inputs">
+
+        <!-- Loan Selection -->
+        <div class="calc-field calc-field-wide">
+          <label for="loanSelect">Loan Option</label>
+          <div class="select-wrap">
+            <select id="loanSelect" onchange="calcUpdate()">
+              <option value="" disabled selected>— Select a loan —</option>
+              <optgroup label="Same-As-Cash Loans">
+                <option value="sac|0|3|DEL2623">90-Day Same-As-Cash (0% for 90 days)</option>
+                <option value="sac|0|6|DEL2624">6-Month Same-As-Cash (0% for 6 months)</option>
+                <option value="sac|0|9|D4377">9-Month Same-As-Cash (0% for 9 months)</option>
+                <option value="sac|0|9|DEL2695">9-Month Same-As-Cash with Payments (0% for 9 months)</option>
+              </optgroup>
+              <optgroup label="Reduced Interest Installment Loans">
+                <option value="ril|8.99|60|DEL2689">8.99% APR — 5-Year Loan</option>
+                <option value="ril|9.99|60|DEL2674">9.99% APR — 5-Year Loan</option>
+                <option value="ril|9.99|84|DEL2675">9.99% APR — 7-Year Loan</option>
+                <option value="ril|9.99|120|DEL2676">9.99% APR — 10-Year Loan</option>
+                <option value="ril|9.99|144|DEL2677">9.99% APR — 12-Year Loan</option>
+                <option value="ril|10.99|144|D8876">10.99% APR — Up to 12-Year Loan</option>
+                <option value="ril|11.99|144|D8877">11.99% APR — Up to 12-Year Loan</option>
+              </optgroup>
+              <optgroup label="Traditional Installment Loan">
+                <option value="ril|8.99|60|DEL2622">Traditional Installment Loan (8.99% APR, 5-Year)</option>
+              </optgroup>
+            </select>
+            <svg class="select-arrow" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+        </div>
+
+        <!-- Loan Amount -->
+        <div class="calc-field">
+          <label for="loanAmount">Loan Amount</label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="text" id="loanAmount" placeholder="15,000" oninput="calcUpdate()" />
+          </div>
+        </div>
+
+        <!-- Interest Rate (read-only) -->
+        <div class="calc-field">
+          <label>Interest Rate</label>
+          <div class="calc-readonly" id="displayRate">—</div>
+        </div>
+
+        <!-- Loan Term (read-only) -->
+        <div class="calc-field">
+          <label>Loan Term</label>
+          <div class="calc-readonly" id="displayTerm">—</div>
+        </div>
+
+      </div>
+
+      <!-- Result -->
+      <div class="calc-result" id="calcResult">
+        <div class="calc-result-inner">
+          <div class="calc-result-label">Estimated Monthly Payment</div>
+          <div class="calc-result-amount" id="resultAmount">—</div>
+          <div class="calc-result-note" id="resultNote"></div>
+        </div>
+      </div>
+
+      <!-- SAC warning (hidden by default) -->
+      <div class="calc-sac-note" id="sacNote" style="display:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#c8973a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Same-As-Cash: if the full balance is <strong>not</strong> paid within the promotional period, a 19.99% APR applies to the remaining balance going forward.</span>
+      </div>
+
+      <div class="calc-disclaimer">
+        Estimates are for illustration purposes only. Actual payment amounts and terms are subject to credit approval by EnerBank. Rates and loan availability may vary.
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="section faq-section">
   <div class="container">
@@ -778,6 +1028,86 @@
 </div>
 
 <script>
+  // ── PAYMENT CALCULATOR ──
+  function calcUpdate() {
+    const sel    = document.getElementById('loanSelect');
+    const amtRaw = document.getElementById('loanAmount').value.replace(/[^0-9.]/g, '');
+    const amount = parseFloat(amtRaw);
+
+    const rateEl   = document.getElementById('displayRate');
+    const termEl   = document.getElementById('displayTerm');
+    const resultEl = document.getElementById('resultAmount');
+    const noteEl   = document.getElementById('resultNote');
+    const sacNote  = document.getElementById('sacNote');
+
+    if (!sel.value) {
+      rateEl.textContent = '—';
+      termEl.textContent = '—';
+      resultEl.textContent = '—';
+      noteEl.textContent = '';
+      sacNote.style.display = 'none';
+      return;
+    }
+
+    const parts   = sel.value.split('|');
+    const type    = parts[0];          // 'sac' or 'ril'
+    const rate    = parseFloat(parts[1]);
+    const months  = parseInt(parts[2]);
+    const years   = months / 12;
+
+    // Display rate
+    rateEl.textContent = type === 'sac' ? '0% (Promo)' : rate.toFixed(2) + '% APR';
+
+    // Display term
+    if (months < 12) {
+      termEl.textContent = months + ' Months';
+    } else {
+      termEl.textContent = (months % 12 === 0 ? (months / 12) : years.toFixed(1)) + ' Years';
+    }
+
+    // Toggle SAC warning
+    sacNote.style.display = type === 'sac' ? 'flex' : 'none';
+
+    if (!amount || isNaN(amount) || amount <= 0) {
+      resultEl.textContent = '—';
+      noteEl.textContent = '';
+      return;
+    }
+
+    let monthly;
+    if (type === 'sac') {
+      // Promo period: simple division, no interest
+      monthly = amount / months;
+      noteEl.textContent = 'Per month to pay off within the ' + (months < 12 ? months + '-month' : (months/12)+'-month') + ' promotional period with $0 interest.';
+    } else {
+      // Standard amortization: M = P * [r(1+r)^n] / [(1+r)^n - 1]
+      const r = (rate / 100) / 12;
+      const n = months;
+      monthly = amount * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      const totalPaid = monthly * n;
+      const totalInterest = totalPaid - amount;
+      noteEl.textContent = 'Total paid: ' + formatCurrency(totalPaid) + ' · Interest paid: ' + formatCurrency(totalInterest);
+    }
+
+    resultEl.textContent = formatCurrency(monthly) + '/mo';
+  }
+
+  function formatCurrency(n) {
+    return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  // Format amount input with commas as user types
+  document.addEventListener('DOMContentLoaded', function() {
+    const amtInput = document.getElementById('loanAmount');
+    amtInput.addEventListener('input', function() {
+      let raw = this.value.replace(/[^0-9]/g, '');
+      if (raw) this.value = parseInt(raw).toLocaleString();
+      else this.value = '';
+      calcUpdate();
+    });
+  });
+
+  // ── FAQ ──
   function toggleFaq(el) {
     const item = el.closest('.faq-item');
     const isOpen = item.classList.contains('open');
