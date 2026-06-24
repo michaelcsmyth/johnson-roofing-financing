@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roofing Financing Options | Johnson Roofing</title>
+  <meta name="description" content="Get approved for roofing financing today. Johnson Roofing offers flexible payment options through EnerBank — same-as-cash loans, low-interest installment plans, and more." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ── BRAND COLORS ── */
+    :root {
+      --navy:   #0d1b2a;
+      --dark:   #131c28;
+      --gold:   #c8973a;
+      --gold-hover: #b07d28;
+      --red:    #c0392b;
+      --light:  #f4f4f4;
+      --white:  #ffffff;
+      --gray:   #8a8a8a;
+      --border: #2a3545;
+    }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .text-center { text-align: center; }
+    .section { padding: 72px 0; }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 13px;
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .top-bar a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    .top-bar a:hover { text-decoration: underline; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 60%, #1a3450 100%);
+      color: var(--white);
+      padding: 80px 24px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8973a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 700;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: clamp(16px, 2vw, 19px);
+      color: #c5cdd6;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 16px 40px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: var(--gold-hover); transform: translateY(-2px); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--gold);
+      padding: 16px 24px;
+    }
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .trust-item svg { flex-shrink: 0; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { background: var(--white); }
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: #555;
+      max-width: 580px;
+      margin: 0 auto 52px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .step {
+      text-align: center;
+      padding: 20px 14px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      position: relative;
+    }
+    .step-num {
+      width: 38px; height: 38px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 auto 12px;
+    }
+    .step h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .step p { font-size: 12px; color: #666; line-height: 1.5; }
+
+    /* ── LOAN CARDS ── */
+    .loans-section { background: var(--dark); }
+    .loans-section .section-title { color: var(--white); }
+    .loans-section .section-sub { color: #8a9aaa; }
+
+    /* Category headings */
+    .loan-category {
+      margin-bottom: 48px;
+    }
+    .loan-category-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .loan-category-title::before,
+    .loan-category-title::after {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin: 0 12px;
+      opacity: 0.5;
+    }
+
+    .loan-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .loan-grid.grid-4  { grid-template-columns: repeat(4, 1fr); }
+    .loan-grid.grid-7  { grid-template-columns: repeat(7, 1fr); }
+    .loan-grid.grid-1  { grid-template-columns: repeat(1, minmax(0, 320px)); margin: 0 auto; }
+    .loan-card {
+      background: #1a2433;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 20px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .loan-card:hover {
+      transform: translateY(-4px);
+      border-top-color: #f0b84a;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    }
+    .loan-card.featured { border-top-color: #f0b84a; background: #1e2d40; }
+
+    .loan-tag {
+      display: inline-block;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+      width: fit-content;
+    }
+    .tag-sac  { background: rgba(200, 151, 58, 0.15); color: var(--gold); border: 1px solid rgba(200,151,58,0.3); }
+    .tag-ril  { background: rgba(16, 112, 192, 0.15); color: #6aacde; border: 1px solid rgba(16,112,192,0.3); }
+    .tag-til  { background: rgba(39, 174, 96, 0.15); color: #5cc98a; border: 1px solid rgba(39,174,96,0.3); }
+    .tag-pop  { background: var(--gold); color: var(--navy); border: 1px solid var(--gold); }
+
+    .loan-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.3px;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .loan-rate {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .loan-rate sup { font-size: 10px; }
+    .loan-desc {
+      font-size: 11px;
+      color: #8a9aaa;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+    .loan-code-row {
+      font-size: 10px;
+      color: #556070;
+      margin-bottom: 12px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .loan-code-row span { color: #6a7a8a; font-weight: 600; }
+
+    .apply-btn {
+      display: block;
+      text-align: center;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 9px 10px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      margin-top: auto;
+    }
+    .apply-btn:hover { background: var(--gold-hover); transform: translateY(-1px); }
+
+    .loan-disclaimer {
+      font-size: 9px;
+      color: #445060;
+      margin-top: 8px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* ── PHONE CTA BANNER ── */
+    .phone-banner {
+      background: var(--red);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .phone-banner p {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .phone-banner a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      transition: border-color 0.2s;
+    }
+    .phone-banner a:hover { border-color: var(--white); }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--white); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid #e8e8e8;
+      padding: 24px 0;
+    }
+    .faq-q {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      user-select: none;
+    }
+    .faq-q .chevron {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      fill: var(--gold);
+      transition: transform 0.25s;
+    }
+    .faq-item.open .chevron { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin-top: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, margin-top 0.2s;
+    }
+    .faq-item.open .faq-a { max-height: 300px; margin-top: 14px; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 60%, #1a3450 100%);
+      padding: 80px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+    .final-cta h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .final-cta h2 span { color: var(--gold); }
+    .final-cta p { font-size: 16px; color: #8a9aaa; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-hover); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 36px;
+      border-radius: 3px;
+      border: 2px solid rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); }
+
+    /* ── FOOTER NOTE ── */
+    .footer-note {
+      background: #0a1520;
+      padding: 24px;
+      text-align: center;
+    }
+    .footer-note p {
+      font-size: 11px;
+      color: #445060;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .footer-note a { color: #6a8aaa; text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .top-bar { flex-direction: column; text-align: center; }
+      .loan-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span>Johnson Roofing &nbsp;|&nbsp; Serving the Greater Phoenix Area</span>
+  <span>Questions? Call us: <a href="tel:4806300011">(480) 630-0011</a></span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Flexible Financing Available</div>
+    <h1>Don't Let Budget<br><span>Stop Your Project</span></h1>
+    <p>Get the roof your home needs today — with financing options designed to fit your budget. Apply in minutes through our lending partner, EnerBank.</p>
+    <a href="#loan-options" class="hero-cta">View Financing Options</a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-items">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      No Money Down Options Available
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Fast Approval — Apply in Minutes
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Rates Starting at 8.99% APR
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#0d1b2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Terms Up to 12 Years
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section">
+  <div class="container text-center">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-title">How Financing Works</h2>
+    <p class="section-sub">From application to approved in just a few steps. We make it easy to get started.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Choose Your Plan</h3>
+        <p>Browse the financing options below and select the loan type that fits your budget and timeline.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Apply Online</h3>
+        <p>Click the "Apply Now" button on your chosen plan. You'll be taken to EnerBank's secure application portal under our contractor profile.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Get Approved</h3>
+        <p>Receive a fast credit decision — often within minutes. No project delays waiting on paperwork.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Start Your Project</h3>
+        <p>Once approved, we schedule your job and get to work. New roof, no stress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHONE CTA BANNER -->
+<div class="phone-banner">
+  <p>Prefer to apply by phone? Call EnerBank directly: <a href="tel:8664057600">(866) 405-7600, Option 4</a></p>
+</div>
+
+<!-- LOAN OPTIONS -->
+<section id="loan-options" class="section loans-section">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">EnerBank — Contractor ID #75443</div>
+      <h2 class="section-title">Your Financing Options</h2>
+      <p class="section-sub">All plans are provided through EnerBank. Choose the option that works best for your situation.</p>
+    </div>
+
+    <!-- CATEGORY 1: Same-As-Cash -->
+    <div class="loan-category">
+      <div class="loan-category-title">Same-As-Cash Loans — No Interest If Paid in Full</div>
+      <div class="loan-grid grid-4">
+
+        <div class="loan-card featured">
+          <span class="loan-tag tag-pop">Most Popular</span>
+          <div class="loan-title">90-Day Same-As-Cash</div>
+          <div class="loan-rate">0%<sup>*</sup></div>
+          <p class="loan-desc">No payments and no interest for 90 days. Pay off the full balance before the promotional period ends and you owe nothing extra. Perfect for homeowners who want to spread the cost over a few months.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2623</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2623&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+          <p class="loan-disclaimer">*19.99% APR applies after promotional period if balance is not paid in full.</p>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-sac">Same-As-Cash</span>
+          <div class="loan-title">6-Month Same-As-Cash</div>
+          <div class="loan-rate">0%<sup>*</sup></div>
+          <p class="loan-desc">No payments and no interest for 6 full months. More time to pay off your balance without interest — ideal for larger projects where you need a few extra months to plan your payoff.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2624</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2624&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+          <p class="loan-disclaimer">*19.99% APR applies after promotional period if balance is not paid in full.</p>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-sac">Same-As-Cash</span>
+          <div class="loan-title">9-Month Same-As-Cash</div>
+          <div class="loan-rate">0%<sup>*</sup></div>
+          <p class="loan-desc">Nine full months to pay off your balance with zero interest. Gives you nearly a year to plan around your finances while getting your roof done now.</p>
+          <div class="loan-code-row">Loan Code: <span>D4377</span></div>
+          <a href="https://application.enerbank.com/?loanCode=D4377&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+          <p class="loan-disclaimer">*19.99% APR applies after promotional period if balance is not paid in full.</p>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-sac">Same-As-Cash</span>
+          <div class="loan-title">9-Month SAC with Payments</div>
+          <div class="loan-rate">0%<sup>*</sup></div>
+          <p class="loan-desc">Same 9-month same-as-cash promotion, with small scheduled monthly payments built in. A structured option for homeowners who prefer a payment plan while still avoiding interest.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2695</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2695&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+          <p class="loan-disclaimer">*19.99% APR applies after promotional period if balance is not paid in full.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CATEGORY 2: Reduced Interest Installment Loans -->
+    <div class="loan-category">
+      <div class="loan-category-title">Reduced Interest Installment Loans — Fixed Monthly Payments</div>
+      <div class="loan-grid grid-7">
+
+        <div class="loan-card featured">
+          <span class="loan-tag tag-pop">Lowest Rate</span>
+          <div class="loan-title">8.99% APR — 5-Year Loan</div>
+          <div class="loan-rate">8.99%<sup>APR</sup></div>
+          <p class="loan-desc">Our lowest available rate. Fixed monthly payments over 5 years. A great choice for homeowners who want a predictable, affordable payment without stretching the term too long.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2689</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2689&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">9.99% APR — 5-Year Loan</div>
+          <div class="loan-rate">9.99%<sup>APR</sup></div>
+          <p class="loan-desc">Fixed rate, fixed payments, 5-year term. Straightforward and budget-friendly with a low monthly cost spread across 60 months.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2674</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2674&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">9.99% APR — 7-Year Loan</div>
+          <div class="loan-rate">9.99%<sup>APR</sup></div>
+          <p class="loan-desc">Same competitive rate extended to 7 years. Lower monthly payments while keeping a reasonable interest rate — good balance of term and cost.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2675</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2675&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">9.99% APR — 10-Year Loan</div>
+          <div class="loan-rate">9.99%<sup>APR</sup></div>
+          <p class="loan-desc">Stretched to 10 years for the lowest possible monthly payment at this rate. A great choice for larger projects where spreading the cost out is the priority.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2676</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2676&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">9.99% APR — 12-Year Loan</div>
+          <div class="loan-rate">9.99%<sup>APR</sup></div>
+          <p class="loan-desc">Maximum term at 9.99% APR. The lowest possible monthly payment at this interest rate — up to 144 months to spread the cost of your new roof.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2677</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2677&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">10.99% APR — Up to 12 Years</div>
+          <div class="loan-rate">10.99%<sup>APR</sup></div>
+          <p class="loan-desc">Flexible term up to 12 years at 10.99% APR. Designed for homeowners who need maximum flexibility in how long they take to pay off their project.</p>
+          <div class="loan-code-row">Loan Code: <span>D8876</span></div>
+          <a href="https://application.enerbank.com/?loanCode=D8876&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="loan-card">
+          <span class="loan-tag tag-ril">Installment Loan</span>
+          <div class="loan-title">11.99% APR — Up to 12 Years</div>
+          <div class="loan-rate">11.99%<sup>APR</sup></div>
+          <p class="loan-desc">Up to 12 years to pay with a fixed rate. Offers the longest available term for homeowners who want to keep monthly payments as manageable as possible.</p>
+          <div class="loan-code-row">Loan Code: <span>D8877</span></div>
+          <a href="https://application.enerbank.com/?loanCode=D8877&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CATEGORY 3: Traditional Installment -->
+    <div class="loan-category">
+      <div class="loan-category-title">Traditional Installment Loan</div>
+      <div class="loan-grid grid-1">
+
+        <div class="loan-card featured">
+          <span class="loan-tag tag-til">Installment Loan</span>
+          <div class="loan-title">Traditional Installment Loan</div>
+          <div class="loan-rate">As Low As<br><span style="font-size:22px;">8.99%</span><sup>APR</sup></div>
+          <p class="loan-desc">A straightforward, fixed-rate installment loan with consistent monthly payments. Ask your project consultant about terms and the rate you qualify for based on your credit profile.</p>
+          <div class="loan-code-row">Loan Code: <span>DEL2622</span></div>
+          <a href="https://application.enerbank.com/?loanCode=DEL2622&contractorId=75443" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Got Questions?</div>
+      <h2 class="section-title">Financing FAQ</h2>
+      <p class="section-sub" style="margin-bottom:40px;">Answers to the most common questions we get about roofing financing.</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What is a Same-As-Cash loan?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">A Same-As-Cash loan means you have a set period — 90 days, 6 months, or 9 months — to pay off the full balance with zero interest. If you pay it in full before the promotional period ends, it costs you nothing extra beyond the loan principal. If you don't pay it off in time, the standard 19.99% APR applies to the remaining balance going forward.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I apply?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">Click the "Apply Now" button on any loan option above. You'll be taken directly to EnerBank's secure online application with Johnson Roofing's contractor profile pre-loaded. The application takes about 10 minutes to complete. You can also call EnerBank at (866) 405-7600, Option 4, and reference Contractor ID #75443.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Does applying affect my credit score?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">A formal loan application will result in a hard credit inquiry, which can temporarily affect your credit score. EnerBank will inform you of this during the application process. We recommend applying when you're ready to move forward with your project.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How quickly will I get a decision?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">EnerBank typically provides a credit decision within minutes of completing the online application. In some cases, additional documentation may be requested, which can add a short review period.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I pay off my loan early?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">Yes. You can make extra payments or pay off your loan in full at any time without prepayment penalties. Paying off early on a Same-As-Cash loan before the promotional period ends means you pay zero interest.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Do I need to choose a loan before getting a quote?
+          <svg class="chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke="#c8973a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="faq-a">No. You can schedule a free inspection and get your project estimate first. Many homeowners get their quote, decide on a financing plan, and apply all in the same day. Our team can walk you through the options during your consultation.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready to Get<br><span>Your Roof Done?</span></h2>
+    <p>Apply for financing today or schedule your free inspection and we'll help you work through the options.</p>
+    <div class="cta-buttons">
+      <a href="https://application.enerbank.com/?contractorId=75443" target="_blank" rel="noopener noreferrer" class="btn-primary">Apply for Financing</a>
+      <a href="https://www.johnsonroofingaz.com/contact" class="btn-outline">Schedule Free Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER LEGAL NOTE -->
+<div class="footer-note">
+  <p>
+    Credit and loans are provided by EnerBank USA. Contractor ID #75443. All loans are subject to credit approval.
+    Same-As-Cash loan rates of 19.99% APR apply after the promotional period if the balance is not paid in full.
+    Reduced interest loan rates and terms are subject to qualification. Not all applicants will qualify for advertised rates.
+    For questions, contact EnerBank at <a href="tel:8664057600">(866) 405-7600</a>, Option 4, or apply online at
+    <a href="https://application.enerbank.com" target="_blank" rel="noopener noreferrer">application.enerbank.com</a>.
+    Johnson Roofing | Mesa, AZ | ROC#&nbsp;— &nbsp;
+    <a href="https://www.johnsonroofingaz.com">johnsonroofingaz.com</a>
+  </p>
+</div>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    // open clicked if it was closed
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+</body>
+</html>
+
+<!-- #JR -->
